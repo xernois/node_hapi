@@ -12,12 +12,23 @@
   "scripts": {
     "start": "node server",
     "test": "lab -a @hapi/code -I \"__core-js_shared__,CSS,regeneratorRuntime,core\" -L",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "bd": "docker run --name hapi-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=hapi -e MYSQL_DATABASE=user -d mysql:5"
   },
   "dependencies": {
-    "@hapi/boom": "9.x.x",
+    "@hapi/boom": "^9.1.4", 
+    "@hapi/jwt": "^3.0.0",
     "@hapipal/haute-couture": "4.x.x",
-    "joi": "17.x.x"
+    "@hapipal/schmervice": "^2.0.0",
+    "@hapipal/schwifty": "6.x.x",
+    "@xernois/iut-encrypt": "^1.0.1",
+    "joi": "17.x.x",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.0",
+    "objection": "2.x.x"
+  },
+  "peerDependencies": {
+    "knex": "0.21.x"
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
@@ -25,6 +36,7 @@
     "@hapi/eslint-plugin-hapi": "4.x.x",
     "@hapi/glue": "8.x.x",
     "@hapi/hapi": "20.x.x",
+    "@hapi/hoek": "9.x.x",
     "@hapi/inert": "6.x.x",
     "@hapi/lab": "24.x.x",
     "@hapi/vision": "6.x.x",
@@ -36,6 +48,8 @@
     "dotenv": "8.x.x",
     "eslint": "7.x.x",
     "exiting": "6.x.x",
-    "hapi-swagger": "14.x.x"
+    "hapi-swagger": "14.x.x",
+    "knex": "0.21.x",
+    "sqlite3": "5.x.x"
   }
 }
