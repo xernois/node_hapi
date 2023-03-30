@@ -13,10 +13,10 @@
     "start": "node server",
     "test": "lab -a @hapi/code -I \"__core-js_shared__,CSS,regeneratorRuntime,core\" -L",
     "lint": "eslint .",
-    "bd": "docker run --name hapi-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=hapi -e MYSQL_DATABASE=user -d mysql:5"
+    "bd": "docker run --name hapi-mysql -p 3406:3306 -e MYSQL_ROOT_PASSWORD=hapi -e MYSQL_DATABASE=user -d mysql:5"
   },
   "dependencies": {
-    "@hapi/boom": "^9.1.4", 
+    "@hapi/boom": "^9.1.4",
     "@hapi/jwt": "^3.0.0",
     "@hapipal/haute-couture": "4.x.x",
     "@hapipal/schmervice": "^2.0.0",
